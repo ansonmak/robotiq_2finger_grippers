@@ -20,7 +20,7 @@
         <param name="rate" value="$(arg rate)"/>
     </node>
 
-    <node pkg="robotiq_2f_gripper_control" type="gripper_controller.py" 
+    <node pkg="robotiq_2f_gripper_control" type="simple_controller.py" 
         name="robotiq_85_client" output="screen">
         <param name="action_name" value="command_robotiq_action" />
     </node>

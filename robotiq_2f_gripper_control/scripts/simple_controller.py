@@ -16,9 +16,9 @@ robotiq_client.wait_for_server()
 def control_gripper():
 
     while not rospy.is_shutdown():
-        print("Go to (0-255): ")
-        x = int(input())
-        width = x/255 * 0.085
+        print("Go to (0-1000): ")
+        x = float(input())
+        width = x/1000 * 0.085
         Robotiq.goto(robotiq_client, pos=width, speed=0.1, force=1, block=True)
 
 if __name__ == '__main__':
